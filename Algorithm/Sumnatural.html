@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Code Explanation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+        }
+        .content {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        code {
+            background: #eee;
+            border: 1px solid #ddd;
+            padding: 5px;
+            border-radius: 3px;
+            display: block;
+            margin: 10px 0;
+        }
+        pre {
+            background: #eee;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 3px;
+            overflow-x: auto;
+        }
+        .note {
+            margin: 20px 0;
+            padding: 15px;
+            background: #e7f0f7;
+            border-left: 5px solid #2196F3;
+        }
+        .note h2 {
+            margin-top: 0;
+        }
+        .example {
+            background: #f9f9f9;
+            border-left: 5px solid #4CAF50;
+            padding: 10px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Java Code Explanation</h1>
+    </header>
+    <div class="container">
+        <div class="content">
+            <h2>Code Overview</h2>
+            <p>This HTML page provides an explanation of a Java program designed to compute the sum of the first <code>n</code> natural numbers using two different algorithms. The Java code is provided below:</p>
+            
+            <pre><code>import java.util.Scanner;
+
+public class SumNNaturalNumbers {
+    
+    // Method to find the sum of the first n natural numbers
+    // This is First person Algorithm There we are using Algorithm
+    // public static int findSum(int n) { // Let's Suppose n is 5
+    //     return n * (n + 1) / 2;
+        // Here The Output is 5 * (5+1)/2
+        // Here we use Boadmas Theroy divide(/) have first prority 6/2 = 3
+        //After Multiplication 5*3 = 15
+// }
+
+// 2nd' Algorithm
+public static int FindSum(int n){
+    int sum = 0; // At the movement the sum is 0;
+    for(int i = 1; i<=n; i++){
+        sum = sum + 1;
+        // Here see How its look 
+        // 0 = 0 +1;
+        // 1 = 1 + 2;
+        // 3 = 3 + 3
+        // 6 = 6 + 4
+        // 10 = 10 + 5; 
+        // 15
+    }
+    return sum;
+}
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter The Number: ");
+        int n = scan.nextInt();
+        
+        // Call the findSum method and display the result
+        int sum = findSum(n);
+        System.out.println("The sum of the first " + n + " natural numbers is: " + sum);
+        
+        // Close the scanner
+        scan.close();
+    }
+}
+</code></pre>
+            
+            <div class="note">
+                <h2>First Algorithm Explanation</h2>
+                <p>The first method, <code>findSum(int n)</code>, uses the mathematical formula to calculate the sum of the first <code>n</code> natural numbers:</p>
+                <p><code>n * (n + 1) / 2</code></p>
+                <p>For example, if <code>n</code> is 5:</p>
+                <ul>
+                    <li>Compute <code>n * (n + 1)</code>: <code>5 * 6 = 30</code></li>
+                    <li>Divide by 2: <code>30 / 2 = 15</code></li>
+                </ul>
+                <p>Thus, the sum of the first 5 natural numbers is 15.</p>
+            </div>
+            
+            <div class="note">
+                <h2>Second Algorithm Explanation</h2>
+                <p>The second method, <code>FindSum(int n)</code>, calculates the sum using a loop:</p>
+                <ul>
+                    <li>Initialize <code>sum</code> to 0.</li>
+                    <li>Iterate from 1 to <code>n</code>, adding the current number to <code>sum</code>.</li>
+                    <li>Return <code>sum</code>.</li>
+                </ul>
+                <p>For example, if <code>n</code> is 5:</p>
+                <ul>
+                    <li>Sum starts at 0.</li>
+                    <li>Add 1: <code>0 + 1 = 1</code></li>
+                    <li>Add 2: <code>1 + 2 = 3</code></li>
+                    <li>Add 3: <code>3 + 3 = 6</code></li>
+                    <li>Add 4: <code>6 + 4 = 10</code></li>
+                    <li>Add 5: <code>10 + 5 = 15</code></li>
+                </ul>
+                <p>Thus, the sum of the first 5 natural numbers is 15.</p>
+            </div>
+
+            <div class="example">
+                <h2>Example Output</h2>
+                <p>For both algorithms, if the input <code>n</code> is 5, the output will be:</p>
+                <p><code>The sum of the first 5 natural numbers is: 15</code></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
