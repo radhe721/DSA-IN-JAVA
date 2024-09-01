@@ -12,7 +12,7 @@ public class SumNNaturalNumbers {
 // }
 
 // 2nd' Algorithm
-public static int FindSum(int n){
+public static int findSum(int n){
     int sum = 0; // At the movement the sum is 0;
     for(int i = 1; i<=n; i++){
         sum = sum + 1;
